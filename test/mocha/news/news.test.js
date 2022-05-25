@@ -28,7 +28,7 @@ describe('News tests', () => {
 			.get('/news/?lng=de')
 			.end((err, res) => {
 				expect(res.statusCode).to.equal(200);
-				expect(res.text).to.contain(i18next.t('global.headline.news'));
+				expect(res.text).to.contain(i18next.t('Neuigkeiten'));
 				resolve();
 			});
 	}));

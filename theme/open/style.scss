@@ -1,14 +1,14 @@
-$primaryColor: #126dc4;
-$secondaryColor: #54616e;
-$accentColor: #E98404;
+$primaryColor: #93A7CA;
+$secondaryColor: #5672A1;
+$accentColor: #35435C;
 
 $logoGradient: linear-gradient(45deg, $primaryColor 30%, $primaryColor);
 
 $colorBeige: #e6e2e2;
 $colorGrey: rgba(232, 232, 232, 0.5);
 
-$logoBackground: url("/images/logo/cloud-transparent-mono.svg") no-repeat center;
-$logoBackgroundTablet: url("/images/logo/cloud-transparent-mono-48-48.svg") no-repeat center;
+$logoBackground: url("/images/logo/app-icon-512.png") no-repeat center;
+$logoBackgroundTablet: url("/images/logo/app-icon-512.png") no-repeat center;
 
 .section-imprint.loggedout ul {
 	list-style-type: none!important;

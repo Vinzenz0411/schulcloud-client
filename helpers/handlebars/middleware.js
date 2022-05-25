@@ -40,7 +40,7 @@ const makeActive = (items, currentUrl) => {
 		if (item.children && item.childActive) {
 			item.children = makeActive(item.children, currentUrl);
 
-			if (item.children.filter((child) => child.class == 'active').length == 0) {
+			if (item.children.filter((child) => child.class === 'active').length === 0) {
 				item.class += ' active';
 			}
 		}
@@ -70,18 +70,39 @@ module.exports = (req, res, next) => {
 	res.locals.backendUrl = PUBLIC_BACKEND_URL;
 
 	// standard views
+	//Übersicht
 	res.locals.sidebarItems = [{
 		name: res.$t('global.link.overview'),
-		testId: 'Übersicht',
+		testId: 'Meine Übersicht',
 		icon: 'th-large',
 		link: '/dashboard/',
+
 	}, {
-		name: res.$t('global.sidebar.link.administrationCourses'),
-		testId: 'Kurse',
-		type: 'legacy',
-		icon: 'graduation-cap',
-		link: '/courses/',
-	}, {
+		name: res.$t('global.sidebar.link.plans'),
+		testId: 'Pläne',
+		icon: 'table',
+		link: '/plans/',
+		children: [
+			{
+				name: res.$t('global.link.Kalender'),
+				testId: 'Stundenplan',
+				icon: 'table',
+				link: '/calendar/',
+			},
+			{
+				name: res.$t('global.link.vertretung'),
+				testId: 'Vertretungsplan',
+				icon: 'table',
+				link: '/files/vertretung/',
+			},
+			{
+				name: res.$t('global.link.mensa'),
+				testId: 'Mensaplan',
+				icon: 'table',
+				link: '/mensa/',
+			},
+		],
+	},{
 		name: res.$t('global.sidebar.link.administrationCourses'),
 		testId: 'Course-Overview',
 		type: 'nuxt',
@@ -96,15 +117,54 @@ module.exports = (req, res, next) => {
 		isExternalIcon: true,
 		link: '/tasks',
 		permission: 'TASK_DASHBOARD_VIEW_V3',
+		children: [
+			{
+				name: res.$t('global.link.files'),
+				testId: 'Meine Dateien',
+				icon: 'folder-open-o',
+				link: '/files/',
+			},
+			{
+				name: res.$t('global.link.teams'),
+				testId: 'Gruppenaufgaben',
+				icon: 'folder-open-o',
+				link: '/teams/',
+			},
+		],
 	}, {
 		name: res.$t('global.headline.tasks'),
-		testId: 'Aufgaben',
+		testId: 'Meine Aufgaben',
 		icon:
 			// eslint-disable-next-line max-len
 			'<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10.382 13.295c.39.39.39 1.02 0 1.4l-4.588 4.588a1 1 0 01-1.414 0l-2.088-2.088a.984.984 0 010-1.4 1 1 0 011.412-.002l1.383 1.377 3.884-3.876a1 1 0 011.411.001zM21 15a1 1 0 110 2h-8a1 1 0 110-2h8zM8 5a1 1 0 011 1v4a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1h4zM7 7H5v2h2V7zm14 0a1 1 0 110 2h-8a1 1 0 110-2h8z"/></svg>',
 		isExternalIcon: true,
 		link: '/tasks',
 		permission: 'TASK_DASHBOARD_TEACHER_VIEW_V3',
+	}, {
+		name: res.$t('global.headline.networking'),
+		testId: 'Networking',
+		icon: 'newspaper-o',
+		link: '/news/',
+		children: [
+			{
+				name: res.$t('global.link.chat'),
+				testId: 'Chat',
+				icon: 'newspaper-o',
+				link: '/news/',
+			},
+			{
+				name: res.$t('global.link.marktPlatz'),
+				testId: 'Marktplatz',
+				icon: 'newspaper-o',
+				link: '/news/',
+			},
+			{
+				name: res.$t('global.headline.news'),
+				testId: 'Neuigkeiten',
+				icon: 'newspaper-o',
+				link: '/news/',
+			},
+		],
 	}, {
 		name: res.$t('global.link.files'),
 		testId: 'Meine Dateien',
@@ -130,16 +190,6 @@ module.exports = (req, res, next) => {
 				link: '/files/shared/',
 			},
 		],
-	}, {
-		name: res.$t('global.headline.news'),
-		testId: 'Neuigkeiten',
-		icon: 'newspaper-o',
-		link: '/news/',
-	}, {
-		name: res.$t('global.link.calendar'),
-		testId: 'Termine',
-		icon: 'table',
-		link: '/calendar/',
 	}];
 
 	// Lern-Store Feature Toggle
@@ -277,7 +327,7 @@ module.exports = (req, res, next) => {
 	// team feature toggle
 	const teamsEnabled = FEATURE_TEAMS_ENABLED === 'true';
 	if (teamsEnabled) {
-		res.locals.sidebarItems.splice(3, 0, {
+		res.locals.sidebarItems.splice(5, 0, {
 			name: res.$t('global.link.teams'),
 			testId: 'Teams',
 			icon: 'users',

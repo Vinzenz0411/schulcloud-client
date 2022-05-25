@@ -45,11 +45,16 @@
 	}
 }
 
+//Neuigkeiten Dashboard
 .dashboard-title {
-	color: $headings-color;
+	color: #93A7CA;
+}
+.dashboard-title.hr {
+	background-color: #93A7CA;
+	margin-top: 2px
 }
 .dashboard-title:hover {
-	color: $primaryColor;
+	color: #35435C;
 }
 .dashboard-title:hover,
 .dashboard-title:visited,
