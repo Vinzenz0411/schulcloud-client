@@ -1607,6 +1607,7 @@
 			"myMaterial": "Meine Materialien",
 			"name": "Name",
 			"news": "Neuigkeiten",
+			"networking": "Networking",
 			"draftTasks": "Entwürfe",
 			"projectExecution": "Projektdurchführung",
 			"sorryItDidNotWork": "Entschuldige, das hat nicht geklappt",
@@ -1654,13 +1655,14 @@
 				"en": "English",
 				"es": "Español",
 				"ua": "Yкраїнський"
-			} 
+			}
 		},
 		"link": {
 			"administrationStudents": "Schüler:innen",
 			"archive": "Archiv",
-			"calendar": "Termine",
+			"Kalender": "Stundenplan",
 			"contact": "Kontakt",
+			"chat": "Chat",
 			"courseData": "Meine Kurs-Dateien",
 			"courseDataContent": "Hier findest du alle Dateien, die in den jeweiligen Kursen im Unterricht verwendet werden. Alle Teilnehmer:innen des Kurses, also die Lehrkraft und die Schüler:innen, haben auf diese Dateien Zugriff.",
 			"files": "Meine Dateien",
@@ -1669,6 +1671,7 @@
 			"filesShared": "geteilte Dateien",
 			"firstSteps": "Erste Schritte",
 			"footerSkipLink": "Zum Footer wechseln",
+			"gamesSuite": "Lernspiele",
 			"helpArea": "Hilfebereich",
 			"helpDesk": "Helpdesk",
 			"imprint": "Impressum",
@@ -1677,15 +1680,20 @@
 			"mainContentSkipLink": "Zum Hauptinhalt wechseln",
 			"management": "Verwaltung",
 			"managementTeachers": "Lehrkräfte",
+			"mensa": "Mensaplan",
 			"openInNewTab": "in neuem Tab öffnen",
 			"openInNewTabWarning": "Wird in einem neuem Tab geöffnet",
-			"overview": "Übersicht",
+			"overview": "Meine Übersicht",
 			"register": "Registrieren",
 			"school": "Schule",
 			"tasksDrafts": "Entwürfe",
 			"teamData": "Meine Team-Dateien",
-			"teams": "Teams",
-			"topNavbarSkipLink": "Zur Navigation oben wechseln"
+			"teams": "Gruppenaufgaben",
+			"topNavbarSkipLink": "Zur Navigation oben wechseln",
+			"schwarzesBrett": "Schwarzes Brett",
+			"marktPlatz": "Marktplatz",
+			"vertretung": "Vertretungsplan"
+
 		},
 		"pagination": {
 			"aria_label": {
@@ -1724,7 +1732,8 @@
 				"addons": "Add-ons",
 				"administration": "Administration",
 				"administrationClasses": "Klassen",
-				"administrationCourses": "Kurse"
+				"administrationCourses": "Kurse",
+				"plans": "Pläne"
 			}
 		},
 		"tab": {

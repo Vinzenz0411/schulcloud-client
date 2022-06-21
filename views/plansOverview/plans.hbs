@@ -1,0 +1,17 @@
+{{#extend "lib/loggedin"}}
+    <!-- Wir können auch CSS Dateien einbinden -->
+    {{#content "styles" mode="append"}}
+        <link rel="stylesheet" href="/styles/news/news.css"/>
+    {{/content}}
+    <!-- JS geht auch -->
+    {{#content "scripts" mode="append"}}
+        <script src="/scripts/news/news.js" defer></script>
+    {{/content}}
+    <!-- Hier geht der eigentliche Inhalt los -->
+    {{#content "body"}}
+        {{#each news}} <!-- Füge für jede News folgendes ein: -->
+            <h1>{{this.title}}</h1> <!-- Titel der News -->
+            <p>{{this.content}}</p> <!-- Inhalt der News -->
+        {{/each}}
+    {{/content}}
+{{/extend}}
