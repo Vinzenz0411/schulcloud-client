@@ -1,14 +1,14 @@
-$primaryColor: #9e292b;
-$secondaryColor:#54616e;
+$primaryColor: #E30614;
+$secondaryColor:#5672A1;
 $accentColor: #E98404;
 
-$logoGradient: linear-gradient(35deg, #9e292b 35%, #f6a800);
+$logoGradient: linear-gradient(35deg, #E30614  35%, #f6a800);
 
 $colorBeige: #e6e2e2;
 $colorGrey: rgba(232, 232, 232, 0.5);
-
-$logoBackground: url("/images/logo/cloud-transparent-mono.svg") no-repeat center;
-$logoBackgroundTablet: url("/images/logo/cloud-transparent-mono-48-48.svg") no-repeat center;
+//Logo geänndert
+$logoBackground: url("/images/logo/schulkaepseleLogo.png") no-repeat center;
+$logoBackgroundTablet: url("/images/logo/logoschulkaepsele.png") no-repeat center;
 
 aside.nav-sidebar{
     .sc-branding{

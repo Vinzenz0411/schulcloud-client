@@ -158,12 +158,12 @@ blockquote {
 //
 
 a {
-  color: $link-color;
-  text-decoration: $link-decoration;
+  color: #E30614;
+  text-decoration: #E30614 ;
 
   @include hover-focus {
-    color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
+    color: #E30614 r;
+    text-decoration: #E30614 ;
   }
 
   &:focus {

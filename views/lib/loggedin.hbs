@@ -148,7 +148,7 @@
                 {{/hasConfig}}
 
                 {{> "lib/components/notification"}}
-				<nav id="top-navbar" class="topbar navbar hide-inline" aria-label="{{ $t "global.aria_label.topMenu"}}">
+				<nav id="top-navbar" class="topbar navbar hide-inline" style="background-color: #93A7CA; border-radius: 0% !important;" aria-label="{{ $t "global.aria_label.topMenu"}}">
 
                     {{#if breadcrumb}}
                         <ol class="breadcrumb">
@@ -176,13 +176,13 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="nav-item fullscreen-action">
+                        {{!-- <li class="nav-item fullscreen-action">
                             <div class="dropdown minimal-button">
                                 <a class="btn btn-secondary btn-thin dropdown-toggle btn-fullscreen" href="" title="{{$t "lib.loggedin.label.fullscreen"}}" aria-label="{{$t "lib.loggedin.label.fullscreen"}}" data-toggle="dropdown">
                                     <i class="fa fa-expand" data-testid="fullscreen-mode" aria-hidden="true"></i>
                                 </a>
                             </div>
-                        </li>
+                        </li> --}}
                         <li class="nav-item qr-code-action">
                             <div class="dropdown minimal-button">
                                 <a class="btn btn-secondary btn-thin dropdown-toggle btn-create-qr" href="" title="{{$t "lib.loggedin.label.qrCode"}}" aria-label="{{$t "lib.loggedin.label.qrCode"}}" data-toggle="dropdown">
@@ -242,6 +242,7 @@
                             {{/unless}}
                         {{/if}}
 
+                        <!--TT -->
                         <li class="nav-item">
                             <div class="btn-group" data-matomo-mask>
                               <div class="dropdown btn-avatar">
@@ -267,7 +268,7 @@
                 <section class="section-title">
                     <div class="container-fluid">
                         <div class="row" id="titlebar">
-                            <div class="col-sm-9">
+                            <!--<div class="col-sm-9">
                                 {{#unless notitle}}
                                 {{#if title}}
                                   <div>
@@ -278,7 +279,7 @@
                                 <div>
                                     {{subtitle}}
                                 </div>
-                            </div>
+                            </div>-->
                             {{#if showSearch}}
                                 <div id="searchBar" class="col-sm-3 hide-inline">
                                     {{#unless liveSearch}}<form class="search-wrapper" action="{{#if searchLabel}}{{searchAction}}{{else}}/content/{{/if}}" method="get">{{/unless}}

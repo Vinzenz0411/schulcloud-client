@@ -77,6 +77,7 @@ module.exports = (req, res, next) => {
 		icon: 'th-large',
 		link: '/dashboard/',
 
+<<<<<<< HEAD
 	}, {
 		name: res.$t('global.sidebar.link.plans'),
 		testId: 'Pläne',
@@ -110,6 +111,34 @@ module.exports = (req, res, next) => {
 		icon: 'graduation-cap',
 		link: '/rooms-overview/',
 	}, {
+=======
+	}, {
+		name: res.$t('global.sidebar.link.plans'),
+		testId: 'Pläne',
+		icon: 'table',
+		link: '/plans/',
+		children: [
+			{
+				name: res.$t('global.link.Kalender'),
+				testId: 'Stundenplan',
+				icon: 'table',
+				link: '/calendar/',
+			},
+			{
+				name: res.$t('global.link.vertretung'),
+				testId: 'Vertretungsplan',
+				icon: 'table',
+				link: '/files/vertretung/',
+			},
+			{
+				name: res.$t('global.link.mensa'),
+				testId: 'Mensaplan',
+				icon: 'table',
+				link: '/mensa/',
+			},
+		],
+	},{
+>>>>>>> 28c1123fa16e408bfd8ab2374a154cc0be9728a8
 		name: res.$t('global.sidebar.link.administrationCourses'),
 		testId: 'Course-Overview',
 		type: 'nuxt',
@@ -154,6 +183,7 @@ module.exports = (req, res, next) => {
 		link: '/news/',
 		children: [
 			{
+<<<<<<< HEAD
 				name: res.$t('global.headline.news'),
 				testId: 'Neuigkeiten',
 				icon: 'newspaper-o',
@@ -175,6 +205,22 @@ module.exports = (req, res, next) => {
 			{
 				name: res.$t('global.link.marktplatz'),
 				testId: 'Marktplatz',
+=======
+				name: res.$t('global.link.chat'),
+				testId: 'Chat',
+				icon: 'newspaper-o',
+				link: '/news/',
+			},
+			{
+				name: res.$t('global.link.marktPlatz'),
+				testId: 'Marktplatz',
+				icon: 'newspaper-o',
+				link: '/news/',
+			},
+			{
+				name: res.$t('global.headline.news'),
+				testId: 'Neuigkeiten',
+>>>>>>> 28c1123fa16e408bfd8ab2374a154cc0be9728a8
 				icon: 'newspaper-o',
 				link: '/news/',
 			},
@@ -204,6 +250,7 @@ module.exports = (req, res, next) => {
 				link: '/files/shared/',
 			},
 		],
+<<<<<<< HEAD
 
 	}, {
 		name: res.$t('global.link.gamesSuite'),
@@ -211,6 +258,8 @@ module.exports = (req, res, next) => {
 		type: 'legacy',
 		icon: 'puzzle-piece',
 		link: '/games/',
+=======
+>>>>>>> 28c1123fa16e408bfd8ab2374a154cc0be9728a8
 	}];
 	// teacher views
 	res.locals.sidebarItems.push({
