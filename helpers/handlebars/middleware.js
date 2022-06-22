@@ -77,6 +77,41 @@ module.exports = (req, res, next) => {
 		icon: 'th-large',
 		link: '/dashboard/',
 
+<<<<<<< HEAD
+	}, {
+		name: res.$t('global.sidebar.link.plans'),
+		testId: 'Pläne',
+		type: 'nuxt',
+		icon: 'table',
+		link: '/plans/',
+		children: [
+			{
+				name: res.$t('global.link.Kalender'),
+				testId: 'Stundenplan',
+				icon: 'table',
+				link: '/calendar/',
+			},
+			{
+				name: res.$t('global.link.vertretung'),
+				testId: 'Vertretungsplan',
+				icon: 'table',
+				link: '/vertretung/',
+			},
+			{
+				name: res.$t('global.link.mensa'),
+				testId: 'Mensaplan',
+				icon: 'table',
+				link: '/mensa/',
+			},
+		],
+	}, {
+		name: res.$t('global.sidebar.link.administrationCourses'),
+		testId: 'Kurse',
+		type: 'legacy',
+		icon: 'graduation-cap',
+		link: '/rooms-overview/',
+	}, {
+=======
 	}, {
 		name: res.$t('global.sidebar.link.plans'),
 		testId: 'Pläne',
@@ -103,6 +138,7 @@ module.exports = (req, res, next) => {
 			},
 		],
 	},{
+>>>>>>> 28c1123fa16e408bfd8ab2374a154cc0be9728a8
 		name: res.$t('global.sidebar.link.administrationCourses'),
 		testId: 'Course-Overview',
 		type: 'nuxt',
@@ -147,6 +183,29 @@ module.exports = (req, res, next) => {
 		link: '/news/',
 		children: [
 			{
+<<<<<<< HEAD
+				name: res.$t('global.headline.news'),
+				testId: 'Neuigkeiten',
+				icon: 'newspaper-o',
+				link: '/news/',
+			},
+			{
+				name: res.$t('global.link.chat'),
+				testId: 'Chat',
+				icon: 'newspaper-o',
+				link: '/rocketChat/',
+			},
+			{
+				name: res.$t('global.link.lernstore'),
+				testId: 'Lern-Store',
+				icon: 'search',
+				link: '/content/',
+				permission: 'LERNSTORE_VIEW',
+			},
+			{
+				name: res.$t('global.link.marktplatz'),
+				testId: 'Marktplatz',
+=======
 				name: res.$t('global.link.chat'),
 				testId: 'Chat',
 				icon: 'newspaper-o',
@@ -161,6 +220,7 @@ module.exports = (req, res, next) => {
 			{
 				name: res.$t('global.headline.news'),
 				testId: 'Neuigkeiten',
+>>>>>>> 28c1123fa16e408bfd8ab2374a154cc0be9728a8
 				icon: 'newspaper-o',
 				link: '/news/',
 			},
@@ -190,30 +250,17 @@ module.exports = (req, res, next) => {
 				link: '/files/shared/',
 			},
 		],
+<<<<<<< HEAD
+
+	}, {
+		name: res.$t('global.link.gamesSuite'),
+		testId: 'Lernspiele',
+		type: 'legacy',
+		icon: 'puzzle-piece',
+		link: '/games/',
+=======
+>>>>>>> 28c1123fa16e408bfd8ab2374a154cc0be9728a8
 	}];
-
-	// Lern-Store Feature Toggle
-	if (Configuration.get('FEATURE_LERNSTORE_ENABLED') === true) {
-		res.locals.sidebarItems.push({
-			name: res.$t('global.link.lernstore'),
-			testId: 'Lern-Store',
-			icon: 'search',
-			link: '/content/',
-			permission: 'LERNSTORE_VIEW',
-		});
-	}
-
-	// Extensions Feature Toggle
-	const extensionsEnabled = FEATURE_EXTENSIONS_ENABLED === 'true';
-	if (extensionsEnabled) {
-		res.locals.sidebarItems.push({
-			name: res.$t('global.sidebar.link.addons'),
-			testId: 'Add-ons',
-			icon: 'puzzle-piece',
-			link: '/addons/',
-		});
-	}
-
 	// teacher views
 	res.locals.sidebarItems.push({
 		name: res.$t('global.link.management'),
