@@ -87,7 +87,7 @@ $(document).ready(() => {
 
 	const calendar = new Calendar(calendarElement, {
 		plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin, momentTimezonePlugin],
-		defaultView: view || 'dayGridMonth',
+		defaultView: view || 'timeGridWeek',
 		editable: false,
 		timeZone: calendarTimezone || 'Europe/Berlin',
 		locale: getCalendarLanguage(),
