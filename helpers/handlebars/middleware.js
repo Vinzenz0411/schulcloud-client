@@ -142,51 +142,10 @@ module.exports = (req, res, next) => {
 		link: '/tasks',
 		permission: 'TASK_DASHBOARD_TEACHER_VIEW_V3',
 	}, {
-		name: res.$t('global.headline.networking'),
-		testId: 'Networking',
+		name: res.$t('global.headline.news'),
+		testId: 'Neuigkeiten',
 		icon: 'newspaper-o',
 		link: '/news/',
-		children: [
-			{
-				name: res.$t('global.headline.news'),
-				testId: 'Neuigkeiten',
-				icon: 'newspaper-o',
-				link: '/news/',
-			},
-			{
-				name: res.$t('global.link.chat'),
-				testId: 'Chat',
-				icon: 'newspaper-o',
-				link: '/rocketChat/',
-			},
-			{
-				name: res.$t('global.link.lernstore'),
-				testId: 'Lern-Store',
-				icon: 'search',
-				link: '/content/',
-				permission: 'LERNSTORE_VIEW',
-			},
-			{
-				name: res.$t('global.link.marktplatz'),
-				testId: 'Marktplatz',
-				name: res.$t('global.link.chat'),
-				testId: 'Chat',
-				icon: 'newspaper-o',
-				link: '/news/',
-			},
-			{
-				name: res.$t('global.link.marktPlatz'),
-				testId: 'Marktplatz',
-				icon: 'newspaper-o',
-				link: '/news/',
-			},
-			{
-				name: res.$t('global.headline.news'),
-				testId: 'Neuigkeiten',
-				icon: 'newspaper-o',
-				link: '/news/',
-			},
-		],
 	}, {
 		name: res.$t('global.link.files'),
 		testId: 'Meine Dateien',
@@ -220,36 +179,6 @@ module.exports = (req, res, next) => {
 		icon: 'puzzle-piece',
 		link: '/games/',
 	}];
-	// teacher views
-	res.locals.sidebarItems.push({
-		name: res.$t('global.link.management'),
-		testId: 'Verwaltung',
-		icon: 'cogs',
-		link: '/administration/',
-		permission: 'STUDENT_LIST',
-		excludedPermission: 'ADMIN_VIEW',
-		children: [
-			{
-				name: res.$t('global.link.administrationStudents'),
-				testId: 'Schüler:innen',
-				icon: 'odnoklassniki',
-				link: '/administration/students/',
-			},
-			{
-				name: res.$t('global.link.managementTeachers'),
-				testId: 'Lehrkräfte',
-				icon: 'user',
-				link: '/administration/teachers/',
-			},
-			{
-				name: res.$t('global.sidebar.link.administrationClasses'),
-				testId: 'Klassen',
-				icon: 'users',
-				link: '/administration/classes/',
-			},
-		],
-	});
-
 	// teacher views
 	res.locals.sidebarItems.push({
 		name: res.$t('global.link.management'),
@@ -320,16 +249,6 @@ module.exports = (req, res, next) => {
 			},
 		],
 	});
-
-	// beta user view
-	res.locals.sidebarItems.push({
-		name: res.$t('global.headline.myMaterial'),
-		testId: 'Meine Materialien',
-		icon: 'book',
-		link: '/my-material/',
-		permission: 'BETA_FEATURES',
-	});
-
 	// team feature toggle
 	const teamsEnabled = FEATURE_TEAMS_ENABLED === 'true';
 	if (teamsEnabled) {
